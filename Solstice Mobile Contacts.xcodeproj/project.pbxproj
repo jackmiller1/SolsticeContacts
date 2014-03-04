@@ -22,6 +22,8 @@
 		68F42A5518C63271000DF3F1 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 68F42A3418C63271000DF3F1 /* UIKit.framework */; };
 		68F42A5D18C63271000DF3F1 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 68F42A5B18C63271000DF3F1 /* InfoPlist.strings */; };
 		68F42A5F18C63271000DF3F1 /* Solstice_Mobile_ContactsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 68F42A5E18C63271000DF3F1 /* Solstice_Mobile_ContactsTests.m */; };
+		68F42A6A18C63318000DF3F1 /* JMContact.m in Sources */ = {isa = PBXBuildFile; fileRef = 68F42A6918C63318000DF3F1 /* JMContact.m */; };
+		68F42A6D18C64727000DF3F1 /* JMLazyImageLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = 68F42A6C18C64727000DF3F1 /* JMLazyImageLoader.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +58,10 @@
 		68F42A5A18C63271000DF3F1 /* Solstice Mobile ContactsTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Solstice Mobile ContactsTests-Info.plist"; sourceTree = "<group>"; };
 		68F42A5C18C63271000DF3F1 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		68F42A5E18C63271000DF3F1 /* Solstice_Mobile_ContactsTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Solstice_Mobile_ContactsTests.m; sourceTree = "<group>"; };
+		68F42A6818C63318000DF3F1 /* JMContact.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JMContact.h; sourceTree = "<group>"; };
+		68F42A6918C63318000DF3F1 /* JMContact.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JMContact.m; sourceTree = "<group>"; };
+		68F42A6B18C64727000DF3F1 /* JMLazyImageLoader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JMLazyImageLoader.h; sourceTree = "<group>"; };
+		68F42A6C18C64727000DF3F1 /* JMLazyImageLoader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JMLazyImageLoader.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,8 +128,12 @@
 				68F42A4618C63271000DF3F1 /* JMMasterViewController.m */,
 				68F42A4818C63271000DF3F1 /* JMDetailViewController.h */,
 				68F42A4918C63271000DF3F1 /* JMDetailViewController.m */,
+				68F42A6B18C64727000DF3F1 /* JMLazyImageLoader.h */,
+				68F42A6C18C64727000DF3F1 /* JMLazyImageLoader.m */,
 				68F42A4B18C63271000DF3F1 /* Images.xcassets */,
 				68F42A3718C63271000DF3F1 /* Supporting Files */,
+				68F42A6818C63318000DF3F1 /* JMContact.h */,
+				68F42A6918C63318000DF3F1 /* JMContact.m */,
 			);
 			path = "Solstice Mobile Contacts";
 			sourceTree = "<group>";
@@ -255,6 +265,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				68F42A6A18C63318000DF3F1 /* JMContact.m in Sources */,
+				68F42A6D18C64727000DF3F1 /* JMLazyImageLoader.m in Sources */,
 				68F42A4A18C63271000DF3F1 /* JMDetailViewController.m in Sources */,
 				68F42A3D18C63271000DF3F1 /* main.m in Sources */,
 				68F42A4718C63271000DF3F1 /* JMMasterViewController.m in Sources */,
