@@ -15,7 +15,6 @@
 		68F42A4118C63271000DF3F1 /* JMAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 68F42A4018C63271000DF3F1 /* JMAppDelegate.m */; };
 		68F42A4418C63271000DF3F1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 68F42A4218C63271000DF3F1 /* Main.storyboard */; };
 		68F42A4718C63271000DF3F1 /* JMMasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 68F42A4618C63271000DF3F1 /* JMMasterViewController.m */; };
-		68F42A4A18C63271000DF3F1 /* JMDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 68F42A4918C63271000DF3F1 /* JMDetailViewController.m */; };
 		68F42A4C18C63271000DF3F1 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 68F42A4B18C63271000DF3F1 /* Images.xcassets */; };
 		68F42A5318C63271000DF3F1 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 68F42A5218C63271000DF3F1 /* XCTest.framework */; };
 		68F42A5418C63271000DF3F1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 68F42A3018C63271000DF3F1 /* Foundation.framework */; };
@@ -24,6 +23,9 @@
 		68F42A5F18C63271000DF3F1 /* Solstice_Mobile_ContactsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 68F42A5E18C63271000DF3F1 /* Solstice_Mobile_ContactsTests.m */; };
 		68F42A6A18C63318000DF3F1 /* JMContact.m in Sources */ = {isa = PBXBuildFile; fileRef = 68F42A6918C63318000DF3F1 /* JMContact.m */; };
 		68F42A6D18C64727000DF3F1 /* JMLazyImageLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = 68F42A6C18C64727000DF3F1 /* JMLazyImageLoader.m */; };
+		68F42A7018C65C89000DF3F1 /* JMContactViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 68F42A6F18C65C89000DF3F1 /* JMContactViewController.m */; };
+		68F42A7218C67550000DF3F1 /* ContactPlaceholder.png in Resources */ = {isa = PBXBuildFile; fileRef = 68F42A7118C67550000DF3F1 /* ContactPlaceholder.png */; };
+		68F42A7418C69B41000DF3F1 /* Favorite.png in Resources */ = {isa = PBXBuildFile; fileRef = 68F42A7318C69B41000DF3F1 /* Favorite.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,8 +52,6 @@
 		68F42A4318C63271000DF3F1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		68F42A4518C63271000DF3F1 /* JMMasterViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JMMasterViewController.h; sourceTree = "<group>"; };
 		68F42A4618C63271000DF3F1 /* JMMasterViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JMMasterViewController.m; sourceTree = "<group>"; };
-		68F42A4818C63271000DF3F1 /* JMDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JMDetailViewController.h; sourceTree = "<group>"; };
-		68F42A4918C63271000DF3F1 /* JMDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JMDetailViewController.m; sourceTree = "<group>"; };
 		68F42A4B18C63271000DF3F1 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		68F42A5118C63271000DF3F1 /* Solstice Mobile ContactsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Solstice Mobile ContactsTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		68F42A5218C63271000DF3F1 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
@@ -62,6 +62,10 @@
 		68F42A6918C63318000DF3F1 /* JMContact.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JMContact.m; sourceTree = "<group>"; };
 		68F42A6B18C64727000DF3F1 /* JMLazyImageLoader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JMLazyImageLoader.h; sourceTree = "<group>"; };
 		68F42A6C18C64727000DF3F1 /* JMLazyImageLoader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JMLazyImageLoader.m; sourceTree = "<group>"; };
+		68F42A6E18C65C89000DF3F1 /* JMContactViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JMContactViewController.h; sourceTree = "<group>"; };
+		68F42A6F18C65C89000DF3F1 /* JMContactViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JMContactViewController.m; sourceTree = "<group>"; };
+		68F42A7118C67550000DF3F1 /* ContactPlaceholder.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ContactPlaceholder.png; sourceTree = "<group>"; };
+		68F42A7318C69B41000DF3F1 /* Favorite.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Favorite.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,13 +125,15 @@
 		68F42A3618C63271000DF3F1 /* Solstice Mobile Contacts */ = {
 			isa = PBXGroup;
 			children = (
+				68F42A7318C69B41000DF3F1 /* Favorite.png */,
+				68F42A7118C67550000DF3F1 /* ContactPlaceholder.png */,
 				68F42A3F18C63271000DF3F1 /* JMAppDelegate.h */,
 				68F42A4018C63271000DF3F1 /* JMAppDelegate.m */,
 				68F42A4218C63271000DF3F1 /* Main.storyboard */,
 				68F42A4518C63271000DF3F1 /* JMMasterViewController.h */,
 				68F42A4618C63271000DF3F1 /* JMMasterViewController.m */,
-				68F42A4818C63271000DF3F1 /* JMDetailViewController.h */,
-				68F42A4918C63271000DF3F1 /* JMDetailViewController.m */,
+				68F42A6E18C65C89000DF3F1 /* JMContactViewController.h */,
+				68F42A6F18C65C89000DF3F1 /* JMContactViewController.m */,
 				68F42A6B18C64727000DF3F1 /* JMLazyImageLoader.h */,
 				68F42A6C18C64727000DF3F1 /* JMLazyImageLoader.m */,
 				68F42A4B18C63271000DF3F1 /* Images.xcassets */,
@@ -244,6 +250,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				68F42A7418C69B41000DF3F1 /* Favorite.png in Resources */,
+				68F42A7218C67550000DF3F1 /* ContactPlaceholder.png in Resources */,
 				68F42A4C18C63271000DF3F1 /* Images.xcassets in Resources */,
 				68F42A3B18C63271000DF3F1 /* InfoPlist.strings in Resources */,
 				68F42A4418C63271000DF3F1 /* Main.storyboard in Resources */,
@@ -266,8 +274,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				68F42A6A18C63318000DF3F1 /* JMContact.m in Sources */,
+				68F42A7018C65C89000DF3F1 /* JMContactViewController.m in Sources */,
 				68F42A6D18C64727000DF3F1 /* JMLazyImageLoader.m in Sources */,
-				68F42A4A18C63271000DF3F1 /* JMDetailViewController.m in Sources */,
 				68F42A3D18C63271000DF3F1 /* main.m in Sources */,
 				68F42A4718C63271000DF3F1 /* JMMasterViewController.m in Sources */,
 				68F42A4118C63271000DF3F1 /* JMAppDelegate.m in Sources */,

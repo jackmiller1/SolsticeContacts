@@ -27,4 +27,6 @@
 @property (strong, nonatomic) UIImage *smallImage;
 @property (strong, nonatomic) UIImage *largeImage;
 
+@property (assign) bool hasLoadedDetailInfo;
+
 @end

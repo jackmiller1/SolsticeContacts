@@ -11,11 +11,18 @@
 
 #import <Foundation/Foundation.h>
 
+// Downloads a single image in the background and then the completion handler is called.
 @interface JMLazyImageLoader : NSObject
 
+// Called once the image is done downloading.
+//   url - the url the image was downloaded from
+//   image - a UIImage of the image downloaded
 @property (nonatomic, copy) void (^completionHandler)(NSURL *url, UIImage *image);
 
+// Starts a download from the url
 - (void)startDownload:(NSURL *)url;
+
+// Cancels download
 - (void)cancelDownload;
 
 @end

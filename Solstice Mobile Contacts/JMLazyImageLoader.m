@@ -21,14 +21,9 @@
 - (void)startDownload:(NSURL *)url
 {
     self.activeDownload = [NSMutableData data];
-    
     NSURLRequest *request = [NSURLRequest requestWithURL:url];
-    
-    // alloc+init and start an NSURLConnection; release on completion/failure
     NSURLConnection *conn = [[NSURLConnection alloc] initWithRequest:request delegate:self];
-    
     self.imageConnection = conn;
-
 }
 
 - (void)cancelDownload
@@ -42,6 +37,7 @@
 
 - (void)connection:(NSURLConnection *)connection didReceiveData:(NSData *)data
 {
+    // Append data as it is downloaded
     [self.activeDownload appendData:data];
 }
 
@@ -56,12 +52,16 @@
 
 - (void)connectionDidFinishLoading:(NSURLConnection *)connection
 {
+    // Image downloaded
     UIImage *image = [[UIImage alloc] initWithData:self.activeDownload];
     
+    // Clear the activeDownload property to allow later attempts
     self.activeDownload = nil;
+    // Release the connection now that it's finished
     self.imageConnection = nil;
     
     if (self.completionHandler) {
+        // Call completion handler
         self.completionHandler(connection.currentRequest.URL, image);
     }
 }
