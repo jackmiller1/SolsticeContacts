@@ -55,6 +55,9 @@
     // Image downloaded
     UIImage *image = [[UIImage alloc] initWithData:self.activeDownload];
     
+    // ADD STUFF
+    NSString *someString = @"Hello, World";
+    
     // Clear the activeDownload property to allow later attempts
     self.activeDownload = nil;
     // Release the connection now that it's finished
