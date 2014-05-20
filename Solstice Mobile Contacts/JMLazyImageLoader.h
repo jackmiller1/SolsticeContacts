@@ -25,6 +25,6 @@
 // Cancels download
 - (void)cancelDownload;
 
-- (void)thisDoesNothing:(NSHashTable *)somehashtablewithareallylongname withThis:(CATransformLayer *)a;
+- (void)thisDoesNothing:(NSHashTable *)somehashtablewithareallylongname withThis:(NSURLConnection *)connection;
 
 @end

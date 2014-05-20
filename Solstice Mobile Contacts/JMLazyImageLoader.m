@@ -55,8 +55,21 @@
     // Image downloaded
     UIImage *image = [[UIImage alloc] initWithData:self.activeDownload];
     
-    // ADD STUFF
-    NSString *someString = @"Hello, World";
+    // Clear the activeDownload property to allow later attempts
+    self.activeDownload = nil;
+    // Release the connection now that it's finished
+    self.imageConnection = nil;
+    
+    if (self.completionHandler) {
+        // Call completion handler
+        self.completionHandler(connection.currentRequest.URL, image);
+    }
+}
+
+- (void)thisDoesNothing:(NSHashTable *)somehashtablewithareallylongname withThis:(NSURLConnection *)connection {
+    
+    // Image downloaded
+    UIImage *image = [[UIImage alloc] initWithData:self.activeDownload];
     
     // Clear the activeDownload property to allow later attempts
     self.activeDownload = nil;
@@ -67,6 +80,7 @@
         // Call completion handler
         self.completionHandler(connection.currentRequest.URL, image);
     }
+    
 }
 
 
