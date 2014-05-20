@@ -221,6 +221,9 @@
 				LastUpgradeCheck = 0500;
 				ORGANIZATIONNAME = "Jack Miller";
 				TargetAttributes = {
+					68F42A2C18C63271000DF3F1 = {
+						DevelopmentTeam = 844J8ZU5CE;
+					};
 					68F42A5018C63271000DF3F1 = {
 						TestTargetID = 68F42A2C18C63271000DF3F1;
 					};
@@ -405,6 +408,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Solstice Mobile Contacts/Solstice Mobile Contacts-Prefix.pch";
 				INFOPLIST_FILE = "Solstice Mobile Contacts/Solstice Mobile Contacts-Info.plist";
@@ -418,6 +422,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Solstice Mobile Contacts/Solstice Mobile Contacts-Prefix.pch";
 				INFOPLIST_FILE = "Solstice Mobile Contacts/Solstice Mobile Contacts-Info.plist";
@@ -487,6 +492,7 @@
 				68F42A6418C63271000DF3F1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		68F42A6518C63271000DF3F1 /* Build configuration list for PBXNativeTarget "Solstice Mobile ContactsTests" */ = {
 			isa = XCConfigurationList;
@@ -495,6 +501,7 @@
 				68F42A6718C63271000DF3F1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
