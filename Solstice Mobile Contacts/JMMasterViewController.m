@@ -150,7 +150,6 @@
     
     // No mobile phone number
     if (mobilePhoneNumber == nil || [mobilePhoneNumber isEqual:@""]) {
-        
         // Loop through the phone number values to find a non-empty one.
         for (NSString *phoneNumber in [contact.phones allValues]) {
             if (!(mobilePhoneNumber == nil) || !([mobilePhoneNumber isEqual:@""])) {

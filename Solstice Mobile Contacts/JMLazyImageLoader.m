@@ -24,13 +24,6 @@
     NSURLRequest *request = [NSURLRequest requestWithURL:url];
     NSURLConnection *conn = [[NSURLConnection alloc] initWithRequest:request delegate:self];
     self.imageConnection = conn;
-    self.imageConnection = conn;
-    self.imageConnection = conn;
-    self.imageConnection = conn;
-    self.imageConnection = conn;
-    self.imageConnection = conn;
-    self.imageConnection = conn;
-    self.imageConnection = conn;
 }
 
 - (void)cancelDownload

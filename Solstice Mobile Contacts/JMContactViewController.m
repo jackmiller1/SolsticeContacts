@@ -106,29 +106,16 @@
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     if (self.contact.hasLoadedDetailInfo) {
-        switch (section) {
-            case 0:
-                return 1;
-                break;
-                
-            case 1:
-                return [[self.contact.phones allValues] count];
-                
-            case 2:
-                return 1;
-                
-            case 3:
-                return 1;
-                
-            case 4:
-                return 1;
-                
-            case 5:
-                return 1;
-                
-            default:
-                return 0;
-                break;
+        
+        if (section == 1) {
+            return [[self.contact.phones allValues] count];
+        }
+        // Sections 0 and 2-5
+        else if (section == 0 || (section <= 5 && section > 1)) {
+            return 1;
+        }
+        else {
+            return 0;
         }
     }
     else {
@@ -212,93 +199,37 @@
         // Header Cell
         if (indexPath.section == 0 && indexPath.row == 0) {
             cell = [tableView dequeueReusableCellWithIdentifier:@"HeaderCell" forIndexPath:indexPath];
-            
-            UILabel *nameLabel = (UILabel *)[cell viewWithTag:101];
-            nameLabel.text = self.contact.name;
-            
-            UILabel *companyLabel = (UILabel *)[cell viewWithTag:102];
-            companyLabel.text = self.contact.company;
-            
-            UIImageView *contactImageView = (UIImageView *)[cell viewWithTag:100];
-            if (self.contact.largeImage == nil) {
-                contactImageView.image = [UIImage imageNamed:@"ContactPlaceholder.png"];
-                
-                // Lazy load larger image.
-                self.imageLoader = [[JMLazyImageLoader alloc] init];
-                
-                // Create weak reference to self to use inside code block...
-                __weak typeof(self) weakSelf = self;
-                
-                [self.imageLoader setCompletionHandler:^(NSURL *url, UIImage *image) {
-                    weakSelf.contact.largeImage = image;
-                    contactImageView.image = image;
-                    
-                    // Must be done on main thread otherwise it won't work properly.
-                    [weakSelf.tableView performSelectorOnMainThread:@selector(reloadData) withObject:nil waitUntilDone:YES];
-                }];
-                
-                [self.imageLoader startDownload:self.contact.largeImageURL];
-                
-            }
-            else {
-                contactImageView.image = self.contact.largeImage;
-            }
-            
-            // Round the corners and add a border to image view
-            contactImageView.layer.cornerRadius = 10.0f;
-            contactImageView.layer.masksToBounds = YES;
-            contactImageView.layer.borderColor = [UIColor blackColor].CGColor;
-            contactImageView.layer.borderWidth = 3.0f;
-            
-            UIImageView *favoriteImageView = (UIImageView *)[cell viewWithTag:103];
-            favoriteImageView.image = [UIImage imageNamed:@"Favorite.png"];
-            favoriteImageView.hidden = !self.contact.favorite;
-            
+            [self setupHeaderCell:cell];
         }
         
         // Phone numbers
         else if (indexPath.section == 1) {
             cell = [tableView dequeueReusableCellWithIdentifier:@"InfoCell" forIndexPath:indexPath];
-            cell.textLabel.text = [[self.contact.phones allKeys] objectAtIndex:indexPath.row];
-            cell.detailTextLabel.text = [[self.contact.phones allValues] objectAtIndex:indexPath.row];
+            [self setupPhoneNumberCell:cell atIndexPath:indexPath];
         }
         
         // Email address
         else if (indexPath.section == 2) {
             cell = [tableView dequeueReusableCellWithIdentifier:@"InfoCell" forIndexPath:indexPath];
-            cell.textLabel.text = @"";
-            cell.detailTextLabel.text = self.contact.email;
+            [self setupEmailCell:cell];
         }
         
         // Address
         else if (indexPath.section == 3) {
-            
             cell = [tableView dequeueReusableCellWithIdentifier:@"InfoCell" forIndexPath:indexPath];
-            cell.textLabel.text = @"";
-            cell.detailTextLabel.text = [NSString stringWithFormat:@"%@\n%@ %@ %@\n%@", [self.contact.address valueForKey:@"street"], [self.contact.address valueForKey:@"city"], [self.contact.address valueForKey:@"state"], [self.contact.address valueForKey:@"zip"], [self.contact.address valueForKey:@"country"]];
-            
-            cell.detailTextLabel.numberOfLines = 3;
-            cell.detailTextLabel.lineBreakMode = NSLineBreakByWordWrapping;
+            [self setupAddressCell:cell];
         }
         
         // Website
         else if (indexPath.section == 4) {
             cell = [tableView dequeueReusableCellWithIdentifier:@"InfoCell" forIndexPath:indexPath];
-            cell.textLabel.text = @"";
-            cell.detailTextLabel.text = self.contact.website;
+            [self setupWebsiteCell:cell];
         }
         
         // Birthday
         else if (indexPath.section == 5) {
             cell = [tableView dequeueReusableCellWithIdentifier:@"InfoCell" forIndexPath:indexPath];
-            cell.textLabel.text = @"";
-            
-            NSDateFormatter *dateFormat = [[NSDateFormatter alloc] init];
-            
-            // Long style format is like March 4, 2014
-            [dateFormat setDateStyle:NSDateFormatterLongStyle];
-            
-            cell.detailTextLabel.text = [dateFormat stringFromDate:self.contact.birthday];
+            [self setupBirthdayCell:cell];
         }
         
     }
@@ -309,6 +240,83 @@
     }
     
     return cell;
+}
+
+- (void)setupHeaderCell:(UITableViewCell *)cell {
+    UILabel *nameLabel = (UILabel *)[cell viewWithTag:101];
+    nameLabel.text = self.contact.name;
+    
+    UILabel *companyLabel = (UILabel *)[cell viewWithTag:102];
+    companyLabel.text = self.contact.company;
+    
+    UIImageView *contactImageView = (UIImageView *)[cell viewWithTag:100];
+    if (self.contact.largeImage == nil) {
+        contactImageView.image = [UIImage imageNamed:@"ContactPlaceholder.png"];
+        
+        // Lazy load larger image.
+        self.imageLoader = [[JMLazyImageLoader alloc] init];
+        
+        // Create weak reference to self to use inside code block...
+        __weak typeof(self) weakSelf = self;
+        
+        [self.imageLoader setCompletionHandler:^(NSURL *url, UIImage *image) {
+            weakSelf.contact.largeImage = image;
+            contactImageView.image = image;
+            
+            // Must be done on main thread otherwise it won't work properly.
+            [weakSelf.tableView performSelectorOnMainThread:@selector(reloadData) withObject:nil waitUntilDone:YES];
+        }];
+        
+        [self.imageLoader startDownload:self.contact.largeImageURL];
+        
+    }
+    else {
+        contactImageView.image = self.contact.largeImage;
+    }
+    
+    // Round the corners and add a border to image view
+    contactImageView.layer.cornerRadius = 10.0f;
+    contactImageView.layer.masksToBounds = YES;
+    contactImageView.layer.borderColor = [UIColor blackColor].CGColor;
+    contactImageView.layer.borderWidth = 3.0f;
+    
+    UIImageView *favoriteImageView = (UIImageView *)[cell viewWithTag:103];
+    favoriteImageView.image = [UIImage imageNamed:@"Favorite.png"];
+    favoriteImageView.hidden = !self.contact.favorite;
+}
+
+- (void)setupPhoneNumberCell:(UITableViewCell *)cell atIndexPath:(NSIndexPath *)indexPath {
+    cell.textLabel.text = [[self.contact.phones allKeys] objectAtIndex:indexPath.row];
+    cell.detailTextLabel.text = [[self.contact.phones allValues] objectAtIndex:indexPath.row];
+}
+
+- (void)setupEmailCell:(UITableViewCell *)cell {
+    cell.textLabel.text = @"";
+    cell.detailTextLabel.text = self.contact.email;
+}
+
+- (void)setupAddressCell:(UITableViewCell *)cell {
+    cell.textLabel.text = @"";
+    cell.detailTextLabel.text = [NSString stringWithFormat:@"%@\n%@ %@ %@\n%@", [self.contact.address valueForKey:@"street"], [self.contact.address valueForKey:@"city"], [self.contact.address valueForKey:@"state"], [self.contact.address valueForKey:@"zip"], [self.contact.address valueForKey:@"country"]];
+    
+    cell.detailTextLabel.numberOfLines = 3;
+    cell.detailTextLabel.lineBreakMode = NSLineBreakByWordWrapping;
+}
+
+- (void)setupWebsiteCell:(UITableViewCell *)cell {
+    cell.textLabel.text = @"";
+    cell.detailTextLabel.text = self.contact.website;
+}
+
+- (void)setupBirthdayCell:(UITableViewCell *)cell {
+    cell.textLabel.text = @"";
+    
+    NSDateFormatter *dateFormat = [[NSDateFormatter alloc] init];
+    
+    // Long style format is like March 4, 2014
+    [dateFormat setDateStyle:NSDateFormatterLongStyle];
+    
+    cell.detailTextLabel.text = [dateFormat stringFromDate:self.contact.birthday];
 }
 
 // Override to support conditional editing of the table view.

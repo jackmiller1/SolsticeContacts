@@ -10,22 +10,26 @@
 	<string>Solstice Mobile Contacts</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
+		<key>392E98CF38823A6E79E9B656DCE54213174977A8</key>
+		<string>https://github.com/jackmillerstudent/SolsticeContacts.git</string>
 		<key>76BB1369-02DA-4991-B240-DEEF551A643C</key>
 		<string>https://github.com/jackmillerstudent/SolsticeContacts.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>Solstice Mobile Contacts.xcodeproj/project.xcworkspace</string>
+	<string>Solstice Mobile Contacts.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
-		<key>76BB1369-02DA-4991-B240-DEEF551A643C</key>
+		<key>392E98CF38823A6E79E9B656DCE54213174977A8</key>
 		<string>../..</string>
+		<key>76BB1369-02DA-4991-B240-DEEF551A643C</key>
+		<string>../../../Solstice Mobile Contacts</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
 	<string>https://github.com/jackmillerstudent/SolsticeContacts.git</string>
 	<key>IDESourceControlProjectVersion</key>
-	<integer>110</integer>
+	<integer>111</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
-	<string>76BB1369-02DA-4991-B240-DEEF551A643C</string>
+	<string>392E98CF38823A6E79E9B656DCE54213174977A8</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
 		<dict>
@@ -35,6 +39,14 @@
 			<string>76BB1369-02DA-4991-B240-DEEF551A643C</string>
 			<key>IDESourceControlWCCName</key>
 			<string>Solstice Mobile Contacts</string>
+		</dict>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>392E98CF38823A6E79E9B656DCE54213174977A8</string>
+			<key>IDESourceControlWCCName</key>
+			<string>SolsticeContacts</string>
 		</dict>
 	</array>
 </dict>
