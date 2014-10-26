@@ -1,0 +1,1 @@
+This is a pretty simple app I made that displays a list of contacts and has a detail page.  The data represented as JSON and is pulled remotely.  Images are downloaded asyncronously as needed.  Feel free to poke around and give feed back.
