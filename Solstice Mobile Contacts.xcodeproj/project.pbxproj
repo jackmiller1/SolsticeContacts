@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		68C59E5B19FD760500B8A219 /* SampleJSON.json in Resources */ = {isa = PBXBuildFile; fileRef = 68C59E5919FD760500B8A219 /* SampleJSON.json */; };
 		68F42A3118C63271000DF3F1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 68F42A3018C63271000DF3F1 /* Foundation.framework */; };
 		68F42A3318C63271000DF3F1 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 68F42A3218C63271000DF3F1 /* CoreGraphics.framework */; };
 		68F42A3518C63271000DF3F1 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 68F42A3418C63271000DF3F1 /* UIKit.framework */; };
@@ -39,6 +40,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		68C59E5919FD760500B8A219 /* SampleJSON.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = SampleJSON.json; sourceTree = "<group>"; };
 		68F42A2D18C63271000DF3F1 /* Solstice Mobile Contacts.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Solstice Mobile Contacts.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		68F42A3018C63271000DF3F1 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		68F42A3218C63271000DF3F1 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -140,6 +142,7 @@
 				68F42A3718C63271000DF3F1 /* Supporting Files */,
 				68F42A6818C63318000DF3F1 /* JMContact.h */,
 				68F42A6918C63318000DF3F1 /* JMContact.m */,
+				68C59E5919FD760500B8A219 /* SampleJSON.json */,
 			);
 			path = "Solstice Mobile Contacts";
 			sourceTree = "<group>";
@@ -256,6 +259,7 @@
 				68F42A7418C69B41000DF3F1 /* Favorite.png in Resources */,
 				68F42A7218C67550000DF3F1 /* ContactPlaceholder.png in Resources */,
 				68F42A4C18C63271000DF3F1 /* Images.xcassets in Resources */,
+				68C59E5B19FD760500B8A219 /* SampleJSON.json in Resources */,
 				68F42A3B18C63271000DF3F1 /* InfoPlist.strings in Resources */,
 				68F42A4418C63271000DF3F1 /* Main.storyboard in Resources */,
 			);
